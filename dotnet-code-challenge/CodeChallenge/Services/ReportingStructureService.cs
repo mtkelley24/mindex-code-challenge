@@ -12,7 +12,7 @@ namespace CodeChallenge.Services
         public ReportingStructureService(ILogger<ReportingStructureService> logger, IEmployeeService employeeService)
 		{
 			_employeeService = employeeService;
-            _logger = logger;
+            		_logger = logger;
 		}
 
 		public ReportingStructure GetReportingStructureById(string id)
