@@ -18,11 +18,11 @@ namespace CodeChallenge.Repositories
 
 		public Compensation Add(Compensation compensation)
 		{
-            compensation.Employee = _employeeContext
-                .Employees
-                .FirstOrDefault(i => i.EmployeeId == compensation.Employee.EmployeeId);
+            		compensation.Employee = _employeeContext
+                		.Employees
+                		.FirstOrDefault(i => i.EmployeeId == compensation.Employee.EmployeeId);
 
-            compensation.CompensationId = Guid.NewGuid().ToString();
+            		compensation.CompensationId = Guid.NewGuid().ToString();
 			_employeeContext.Compensations.Add(compensation);
 			return compensation;
 		}
