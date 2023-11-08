@@ -28,7 +28,8 @@ namespace CodeChallenge.Services
 			};
 		}
 
-		public int GetNumberOfReports(Employee employee)
+  		//Recursive method to get the number of direct reports and the direct reports of those direct reports and so on
+		private int GetNumberOfReports(Employee employee)
 		{
 			int count = 0;
 			if(employee.DirectReports != null)
